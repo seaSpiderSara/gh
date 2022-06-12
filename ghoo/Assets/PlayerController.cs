@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
 
         private Vector2 _movement;
 
+        public Animator playerAnimator;
+        private Vector2 _previousPosition;
+
         private void Start()
         {
-
+            _previousPosition = playerRb.position;
         }
 
 
@@ -24,7 +27,13 @@ public class PlayerController : MonoBehaviour
 
         private void FixedUpdate()
         {
-            playerRb.MovePosition(playerRb.position + _movement * playerSpeed);
+             playerRb.MovePosition(playerRb.position + _movement * playerSpeed);
+            
+        //animation
+        if (playerRb.position == _previousPosition)
+        {
+
+        }
         }
 
 }
