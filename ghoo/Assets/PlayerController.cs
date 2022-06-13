@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
         private Vector2 _movement;
 
-        public Animator playerAnimator;
+        public Animator playerA;
         private Vector2 _previousPosition;
 
         private void Start()
@@ -32,8 +32,31 @@ public class PlayerController : MonoBehaviour
         //animation
         if (playerRb.position == _previousPosition)
         {
+            playerA.SetBool("moving", false);
+        }
+        else
+        {
+            playerA.SetBool("moving", true);
 
+            if(_movement.y < 0)
+            {
+                playerA.SetInteger("direction", 0);
+            }
+            if (_movement.x < 0)
+            {
+                playerA.SetInteger("direction", 1);
+            }
+            if (_movement.y > 0)
+            {
+                playerA.SetInteger("direction", 2);
+            }
+            if (_movement.x > 0)
+            {
+                playerA.SetInteger("direction", 3);
+            }
         }
-        }
+
+        _previousPosition = playerRb.position;
+    }
 
 }

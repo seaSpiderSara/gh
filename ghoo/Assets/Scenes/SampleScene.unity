@@ -389,7 +389,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.65999997}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 0.125
   playerRb: {fileID: 825167118}
-  playerAnimator: {fileID: 0}
+  playerA: {fileID: 825167119}
 --- !u!50 &825167118
 Rigidbody2D:
   serializedVersion: 4
